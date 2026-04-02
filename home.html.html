@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nyabwina sacco ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="images\logo.JPG">NYABWINA SACCO LTD</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#our team">our team</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Welcome to Our SACCO</h1>
+  <p>Empowering members through savings and affordable loans</p>
+  <a href="#contact" class="btn">Join Us</a>
+</section>
+
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>We are a cooperative society committed to improving the financial lives of our members.</p><br>
+  <p>we are located in Nyabwina kyabuharambo masheruka sheema Uganda</p>
+  <iframe
+  src="https://www.openstreetmap.org/export/embed.html?bbox=32.5%2c0.3%2c32.7%2c0.4&amp;layer=mapnik"
+  width="600"
+  height="450"></iframe>
+</section>
+
+<section section id="our team" class="section">
+  <div class="slider">
+  <div class="slides" id="slideContainer">
+    <img src="images/staff.jpg">
+     <img src="images/board.jpg">
+      <img src="images/founders.jpg">
+       <img src="images/clients.jpg">
+        <img src="images/security.jpg">
+   
+  </div>
+
+  <button class="prev" onclick="prevSlide()">❮</button>
+  <button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+<script>
+  let index = 0;
+
+  function showSlide() {
+    const slides = document.getElementById("slideContainer");
+    slides.style.transform = "translateX(" + (-400 * index) + "px)";
+  }
+
+  function nextSlide() {
+    if (index < 2) {
+      index++;
+    } else {
+      index = 0;
+    }
+    showSlide();
+  }
+
+  function prevSlide() {
+    if (index > 0) {
+      index--;
+    } else {
+      index = 2;
+    }
+    showSlide();
+  }
+</script>
+
+</section>
+
+<section id="services" class="section services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">💰 Savings Accounts</div>
+    <div class="card">🏦 Loans</div>
+    <div class="card">📈 Investment Advice</div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 My SACCO. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
